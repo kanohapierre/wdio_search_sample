@@ -8,5 +8,9 @@ Install YARN LTS [NodeJS LTS](https://classic.yarnpkg.com/en/docs/install#window
 From the root execute the tests
 
 ```bash
+yarn install
+```
+
+```bash
 yarn qa:go
 ```
