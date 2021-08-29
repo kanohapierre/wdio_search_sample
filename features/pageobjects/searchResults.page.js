@@ -12,7 +12,7 @@ class SearchResultsPage extends Page {
     async checkSnippet(message) {
         await this.resultSnippet.scrollIntoView();
         const checkSearch = await this.resultSnippet.getText();
-        checkSearch.includes('Sonepar');
+        checkSearch.includes(message);
     }
 
 }
