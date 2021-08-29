@@ -18,13 +18,7 @@ Then(/^I should see a browser title containing (\w+)$/, async (title) => {
     await SearchResultsPage.dismissNotif();
 });
 
-Then(/^I should see a text containing (\w+)$/, async (message) => {
-        // await expect(browser).toHaveTitleContaining(message);
-        // await expect(SearchResultsPage.popinNotif).toBeExisting();
-        // await SearchResultsPage.dismissNotif();
-
-        const snippet = await SearchResultsPage.checkSnippet();
-        console.log(await snippet);
-        await expect(snippet).toHaveLinkContaining(message);
+Then(/^I should see a Sonepar displayed in (\w+)$/, async (message) => {
+        await SearchResultsPage.checkSnippet(message);
 });
 

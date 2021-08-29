@@ -9,11 +9,12 @@ class SearchResultsPage extends Page {
         await this.popinNotif.click();
     }
 
-    async checkSnippet() {
+    async checkSnippet(message) {
         await this.resultSnippet.scrollIntoView();
-        return this.resultSnippet.getText();
+        const checkSearch = await this.resultSnippet.getText();
+        checkSearch.includes('Sonepar');
     }
 
 }
 
-module.exports = new SearchResultsPage();
+module.exports = new SearchResultsPage(); 
